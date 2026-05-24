@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Vashisht | Futuristic Developer Portfolio</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Sai Vashisht is a Frontend Developer & AI Enthusiast building futuristic interactive websites and web applications.">
+    <meta name="keywords"
+        content="Sai Vashisht, Frontend Developer, AI Developer, Web Design, Portfolio, React, JavaScript, HTML, CSS">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Devicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <!-- Typed JS -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Particles -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-content">
+            <h1 class="loader-logo">SV.</h1>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- PROGRESS BAR -->
+    <div id="progress-bar"></div>
+
+    <!-- CURSOR GLOW (ambient behind elements) -->
+    <div class="cursor-glow"></div>
+
+    <!-- FLOATING SOCIALS -->
+    <div class="floating-socials">
+        <a href="https://github.com" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h1 class="logo">SV.</h1>
+
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#timeline" class="nav-link">Journey</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="mode-btn" onclick="toggleMode()" aria-label="Toggle Theme">🌙</button>
+            <button class="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-bg"></div>
+
+        <!-- Decorative Glow Orbs -->
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+
+        <img src="images/profile.jpg" alt="profile" class="profile-img" data-aos="zoom-in">
+
+        <h2 class="reveal-text delay-1">Hello, I'm</h2>
+        <h1 class="reveal-text delay-2"><span class="gradient-text">Sai Vashisht</span></h1>
+
+        <p class="typing-text reveal-text delay-3">
+            <span id="typing"></span>
+        </p>
+
+        <div class="hero-buttons reveal-text delay-4">
+            <button onclick="scrollToSection()" class="explore-btn">
+                Explore Work
+            </button>
+            <a href="resume.pdf" download>
+                <button class="resume-btn">
+                    Download Resume
+                </button>
+            </a>
+        </div>
+
+        <!-- SCROLL INDICATOR -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" data-aos="fade-right">
+        <h2>About Me</h2>
+
+        <div class="about-grid">
+            <div class="about-info-card">
+                <div class="about-tag">Sai Vashisht</div>
+                <h3>Frontend Developer & AI Enthusiast</h3>
+                <p class="about-lead">
+                    Transforming complex ideas into interactive, high-fidelity web experiences.
+                </p>
+                <p>
+                    I am a frontend developer and student dedicated to building modern, responsive websites and
+                    AI-integrated applications. I specialize in combining clean, semantic code with futuristic UI design
+                    and smooth micro-interactions.
+                </p>
+                <p>
+                    Whether it's designing clean vector assets, structuring scalable frontend interfaces, or deploying
+                    machine learning workflows, I strive to make digital platforms engaging, accessible, and
+                    high-performing.
+                </p>
+
+                <!-- Stats Counters panel -->
+                <div class="about-counters">
+                    <div class="counter-box">
+                        <div class="counter-num-wrapper">
+                            <span class="counter-number" data-target="12">0</span><span class="counter-plus">+</span>
+                        </div>
+                        <p class="counter-label">Projects Completed</p>
+                    </div>
+                    <div class="counter-box">
+                        <div class="counter-num-wrapper">
+                            <span class="counter-number" data-target="15">0</span><span class="counter-plus">+</span>
+                        </div>
+                        <p class="counter-label">Technologies Mastered</p>
+                    </div>
+                    <div class="counter-box">
+                        <div class="counter-num-wrapper">
+                            <span class="counter-number" data-target="3">0</span><span class="counter-plus">k+</span>
+                        </div>
+                        <p class="counter-label">Lines of Code</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-stats-container">
+                <div class="stat-card" data-tilt>
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div>
+                        <h4>Creative UI/UX</h4>
+                        <p>Fascinated by futuristic design systems, fluid animations, and immersive experiences.</p>
+                    </div>
+                </div>
+
+                <div class="stat-card" data-tilt>
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+                    <div>
+                        <h4>Clean Code</h4>
+                        <p>Writing semantic HTML, modular CSS, and robust JavaScript that scale gracefully.</p>
+                    </div>
+                </div>
+
+                <div class="stat-card" data-tilt>
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <div>
+                        <h4>AI Integration</h4>
+                        <p>Integrating state-of-the-art LLMs and automation scripts into user interfaces.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" data-aos="fade-left">
+        <h2>Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon">
+                    <i class="devicon-html5-plain colored"></i>
+                </div>
+                <h3>HTML5</h3>
+                <p>Designing clean, semantic web layouts that form the backbone of modern web applications.</p>
+                <div class="skill-progress-container">
+                    <div class="skill-progress-header">
+                        <span class="skill-level-text">Advanced</span>
+                        <span class="skill-percentage-text">90%</span>
+                    </div>
+                    <div class="skill-progress-track">
+                        <div class="skill-progress-bar" data-progress="90"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon">
+                    <i class="devicon-css3-plain colored"></i>
+                </div>
+                <h3>CSS3</h3>
+                <p>Crafting responsive designs, smooth transitions, glassmorphic layouts, and animations.</p>
+                <div class="skill-progress-container">
+                    <div class="skill-progress-header">
+                        <span class="skill-level-text">Advanced</span>
+                        <span class="skill-percentage-text">85%</span>
+                    </div>
+                    <div class="skill-progress-track">
+                        <div class="skill-progress-bar" data-progress="85"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon">
+                    <i class="devicon-javascript-plain colored"></i>
+                </div>
+                <h3>JavaScript</h3>
+                <p>Implementing interactive components, event listeners, dynamic themes, and typed animations.</p>
+                <div class="skill-progress-container">
+                    <div class="skill-progress-header">
+                        <span class="skill-level-text">Intermediate</span>
+                        <span class="skill-percentage-text">80%</span>
+                    </div>
+                    <div class="skill-progress-track">
+                        <div class="skill-progress-bar" data-progress="80"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon">
+                    <i class="devicon-python-plain colored"></i>
+                </div>
+                <h3>Python</h3>
+                <p>Writing backend logic, processing data, and scripting automation workflows.</p>
+                <div class="skill-progress-container">
+                    <div class="skill-progress-header">
+                        <span class="skill-level-text">Intermediate</span>
+                        <span class="skill-percentage-text">70%</span>
+                    </div>
+                    <div class="skill-progress-track">
+                        <div class="skill-progress-bar" data-progress="70"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon">
+                    <i class="devicon-git-plain colored"></i>
+                </div>
+                <h3>Git & GitHub</h3>
+                <p>Tracking code version history, managing repositories, and collaborating with developers.</p>
+                <div class="skill-progress-container">
+                    <div class="skill-progress-header">
+                        <span class="skill-level-text">Intermediate</span>
+                        <span class="skill-percentage-text">75%</span>
+                    </div>
+                    <div class="skill-progress-track">
+                        <div class="skill-progress-bar" data-progress="75"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon">
+                    <i class="devicon-figma-plain colored"></i>
+                </div>
+                <h3>Figma (UI/UX)</h3>
+                <p>Wireframing user journeys and designing high-fidelity interactive user interfaces.</p>
+                <div class="skill-progress-container">
+                    <div class="skill-progress-header">
+                        <span class="skill-level-text">Intermediate</span>
+                        <span class="skill-percentage-text">75%</span>
+                    </div>
+                    <div class="skill-progress-track">
+                        <div class="skill-progress-bar" data-progress="75"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon">
+                    <i class="fa-solid fa-laptop-code" style="color: #38bdf8;"></i>
+                </div>
+                <h3>Responsive Design</h3>
+                <p>Optimizing websites for all devices, screen sizes, and orientations using media queries.</p>
+                <div class="skill-progress-container">
+                    <div class="skill-progress-header">
+                        <span class="skill-level-text">Advanced</span>
+                        <span class="skill-percentage-text">90%</span>
+                    </div>
+                    <div class="skill-progress-track">
+                        <div class="skill-progress-bar" data-progress="90"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon">
+                    <i class="devicon-vscode-plain colored"></i>
+                </div>
+                <h3>VS Code</h3>
+                <p>Developing code efficiently using advanced extensions, debugging tools, and terminal integration.</p>
+                <div class="skill-progress-container">
+                    <div class="skill-progress-header">
+                        <span class="skill-level-text">Advanced</span>
+                        <span class="skill-percentage-text">85%</span>
+                    </div>
+                    <div class="skill-progress-track">
+                        <div class="skill-progress-bar" data-progress="85"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" data-tilt>
+                <div class="skill-icon">
+                    <i class="fa-solid fa-brain" style="color: #c084fc;"></i>
+                </div>
+                <h3>AI Tools</h3>
+                <p>Leveraging LLMs and prompt engineering to write clean code, brainstorm designs, and automate
+                    processes.</p>
+                <div class="skill-progress-container">
+                    <div class="skill-progress-header">
+                        <span class="skill-level-text">Intermediate</span>
+                        <span class="skill-percentage-text">80%</span>
+                    </div>
+                    <div class="skill-progress-track">
+                        <div class="skill-progress-bar" data-progress="80"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline">
+        <h2>Journey</h2>
+
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-box" data-tilt>
+                    <h3>2024</h3>
+                    <p>Started learning Web Development.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-box" data-tilt>
+                    <h3>2025</h3>
+                    <p>Built frontend and AI projects.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-box" data-tilt>
+                    <h3>2026</h3>
+                    <p>Learning advanced animations and UI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <h2>Services</h2>
+
+        <div class="services-grid">
+            <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3>Web Design</h3>
+                <p>Modern responsive website design focusing on speed, search engine optimization, and visual impact.
+                </p>
+            </div>
+
+            <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Frontend Development</h3>
+                <p>Interactive, high-fidelity frontend websites using semantic HTML, pure CSS, and modern animations.
+                </p>
+            </div>
+
+            <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Clean modern interfaces designed specifically for your target audience, wireframed to precision.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project-grid">
+            <div class="project-card overlay-project-card" onclick="openProjectModal('foodapp')" data-tilt>
+                <div class="overlay-image-wrapper">
+                    <img src="images/quickbite.png" class="project-image" alt="Food Delivery App">
+                    <div class="image-text-overlay">
+                        <h3>Food Delivery App</h3>
+                        <p>Modern food delivery website.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card overlay-project-card" onclick="openProjectModal('spiceempire')" data-tilt>
+                <div class="overlay-image-wrapper">
+                    <img src="images/spiceempire.png" class="project-image" alt="SpiceEmpire">
+                    <div class="image-text-overlay">
+                        <h3>SpiceEmpire</h3>
+                        <p>Indian restaurant and culinary website built with Google AI Studio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+
+        <div class="testimonials-carousel-container">
+            <div class="testimonials-carousel">
+                <div class="testimonial-card active">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p>"Amazing frontend developer with creative UI skills."</p>
+                    <div class="testimonial-author">
+                        <h4>Client A</h4>
+                        <span>Product Manager</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <p>"Builds clean and modern websites."</p>
+                    <div class="testimonial-author">
+                        <h4>Client B</h4>
+                        <span>Software Engineer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-arrow prev-arrow" onclick="moveTestimonial(-1)"
+                    aria-label="Previous Testimonial">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div class="carousel-dots" id="carousel-dots">
+                    <!-- Dots generated dynamically -->
+                </div>
+                <button class="carousel-arrow next-arrow" onclick="moveTestimonial(1)" aria-label="Next Testimonial">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        
+        <form id="contact-form" class="contact-form">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="New Portfolio Message!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="send-message-btn">
+                <span class="btn-text">Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 Sai Vashisht Portfolio | Designed for the future.</p>
+        </div>
+    </footer>
+
+    <!-- PROJECTS MODAL -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-card glass-modal">
+            <button class="close-modal-btn" onclick="closeModal()" aria-label="Close Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modal-img" src="" alt="Project Image">
+                </div>
+                <div class="modal-info-container">
+                    <h3 id="modal-title">Project Title</h3>
+                    <p id="modal-desc">Detailed project description...</p>
+                    <div class="modal-tags" id="modal-tags">
+                        <!-- Tech Tags go here dynamically -->
+                    </div>
+                    <div class="modal-links">
+                        <a id="modal-live-link" href="#" target="_blank" class="modal-btn live-btn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
+                        <a id="modal-github-link" href="#" target="_blank" class="modal-btn github-btn">
+                            <i class="fa-brands fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Vanilla Tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
