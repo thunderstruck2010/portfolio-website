@@ -411,26 +411,27 @@ if (contactForm) {
         
         const formData = new FormData(contactForm);
         
-        // Convert Form Data to JSON for FormSubmit AJAX API
-        const formObject = {};
-        formData.forEach((value, key) => {
-            formObject[key] = value;
-        });
-        
-        fetch("https://formsubmit.co/ajax/saivashisht2010123@gmail.com", {
+        // Formspree API endpoint
+        // Please replace "YOUR_FORMSPREE_ID" with your actual Formspree form ID
+        fetch("https://formspree.io/f/YOUR_FORMSPREE_ID", {
             method: "POST",
             headers: { 
-                'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
-            body: JSON.stringify(formObject)
+            body: formData
         })
         .then(response => {
             if (response.ok) {
                 showToast("Message sent successfully! I'll get back to you soon.", "success");
                 contactForm.reset();
             } else {
-                showToast("Oops! Something went wrong. Please try again.", "error");
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        showToast(data["errors"].map(error => error["message"]).join(", "), "error");
+                    } else {
+                        showToast("Oops! Something went wrong. Please try again.", "error");
+                    }
+                })
             }
         })
         .catch(error => {

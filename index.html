@@ -511,12 +511,8 @@
     <section id="contact">
         <h2>Contact Me</h2>
         
-        <form id="contact-form" class="contact-form">
-            <!-- FormSubmit Configuration -->
-            <input type="hidden" name="_subject" value="New Portfolio Message!">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+            <!-- Formspree fields -->
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
